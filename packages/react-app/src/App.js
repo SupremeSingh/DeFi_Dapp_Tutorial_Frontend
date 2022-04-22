@@ -1,5 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { Contract } from "@ethersproject/contracts";
+import { formatEther } from "@ethersproject/units";
 import { shortenAddress, useCall, useEthers, useLookupAddress } from "@usedapp/core";
 import React, { useEffect, useState } from "react";
 
@@ -13,7 +14,7 @@ function WalletButton() {
   const [rendered, setRendered] = useState("");
 
   const ens = useLookupAddress();
-  const { account, activateBrowserWallet, deactivate, error } = useEthers();
+  const { account, activateBrowserWallet, deactivate, utils, error } = useEthers();
 
   useEffect(() => {
     if (ens) {
@@ -71,18 +72,23 @@ function App() {
   return (
     <Container>
       <Header>
+        <h1>Simple Lottery Dapp</h1>
         <WalletButton />
       </Header>
       <Body>
-        <Image src={logo} alt="ethereum-logo" />
-        <p>
-          Edit <code>packages/react-app/src/App.js</code> and save to reload.
-        </p>
-        <Link href="https://reactjs.org">
-          Learn React
-        </Link>
-        <Link href="https://usedapp.io/">Learn useDapp</Link>
-        <Link href="https://thegraph.com/docs/quick-start">Learn The Graph</Link>
+        <h1>Feeling Lucky Today ?</h1>
+        <h3>Last Lottery Started:</h3>
+        <h3>Number of Players</h3>
+        <h3>Buy in</h3>
+        <h3>Total reward</h3>
+        <button>
+        Buy tokens
+        </button>
+        <button>
+        Enter Lottery
+        </button>
+        <h3>Last Winner: </h3>
+        
       </Body>
     </Container>
   );

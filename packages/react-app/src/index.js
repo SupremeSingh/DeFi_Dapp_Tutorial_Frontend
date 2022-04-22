@@ -8,11 +8,11 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 // Change this to your own Infura project id: https://infura.io/register
-const INFURA_PROJECT_ID = "defba93b47f748f09fcead8282b9e58e";
+const ALCHEMY_PROJECT_KEY = "ZU4j-vWH7APGNuYe1xdqx1BfWb2I-bcT";
 const config = {
   readOnlyChainId: Mainnet.chainId,
   readOnlyUrls: {
-    [Mainnet.chainId]: "https://mainnet.infura.io/v3/" + INFURA_PROJECT_ID,
+    [Mainnet.chainId]: "https://eth-rinkeby.alchemyapi.io/v2/" + ALCHEMY_PROJECT_KEY,
   },
 }
 

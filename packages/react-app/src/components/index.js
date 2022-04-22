@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Body = styled.div`
   align-items: center;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -24,7 +24,7 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
-  background-color: #282c34;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   height: calc(100vh);
@@ -32,11 +32,12 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   align-items: center;
-  background-color: #282c34;
+  background-color: #0781b7;
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding-left: 20px;
   min-height: 70px;
 `;
 
